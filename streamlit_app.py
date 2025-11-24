@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.colors import logNorm
+from matplotlib.colors import LogNorm
 from io import BytesIO
 
 st.set_page_config(page_title="MZT Pro", layout="wide", page_icon="⚡")
@@ -143,5 +143,6 @@ buf = BytesIO()
 fig.savefig(buf, format="png", dpi=500, bbox_inches="tight", facecolor="#0a0e17")
 buf.seek(0)
 st.download_button("Download Map (500 DPI PNG)", buf, f"MZT_Pro_{chem_name.replace(' ', '_')}.png", "image/png")
+
 
 
