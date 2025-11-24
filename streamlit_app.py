@@ -143,3 +143,4 @@ buf = BytesIO()
 fig.savefig(buf, format="png", dpi=500, bbox_inches="tight", facecolor="#0a0e17")
 buf.seek(0)
 st.download_button("Download Map (500 DPI PNG)", buf, f"MZT_Pro_{chem_name.replace(' ', '_')}.png", "image/png")
+
